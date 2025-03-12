@@ -162,7 +162,7 @@ nav .fa{
        transition: 1s;
     }
     nav{
-        height: 13vh;
+        height: 12vh;
         background-color: aqua;
         padding: 2% 6%;
         display: flex;
@@ -215,7 +215,7 @@ nav .fa{
         box-shadow: 0 0 10px 3px rgb(242, 47, 8);
     }
     nav .logo{
-        font-size: 15px;
+        font-size: 13px;
         font-style: italic;
     
     }
@@ -312,7 +312,7 @@ h3{
  
     @media (max-width: 700px) {
         nav {
-            height: 13vh;
+            height: 12vh;
             background-color: aqua;
             padding: 2% 6%;
             display: flex;
@@ -366,7 +366,7 @@ h3{
         width:60%;
     }
     nav .logo{
-        font-size: 15px;
+        font-size: 13px;
         font-style: italic;
     
     }
