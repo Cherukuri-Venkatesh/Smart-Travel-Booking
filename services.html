@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Travel Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e81212;
+    color: #333;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    background-color: #0000ff;
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.category h2 {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown {
+    display: none;
+    margin-top: 5px;
+}
+
+.dropdown a {
+    display: block;
+    padding: 8px;
+    background: #c90b1e;
+    color: #0fe016;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.dropdown a:hover {
+    background: #007bff;
+    color: white;
+}
+
+
+    </style>
+    
+    
+
+</head>
+ <body >
+    
+    <nav>
+        <div class="logo">
+            <h1 style="font-weight: bold;">Smart Travel Booking </h1>
+        </div>
+        <div class="links">
+            <a href="newhome.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <h2 style="text-align: center; background-color:#ffff00;color: #df2531;">Services</h2>
+    <div class="container" id="services-container">
+        <!-- Search Bar inside container -->
+        <div style="text-align: center; margin-bottom: 20px; max-width: 97%;">
+            <input type="text" id="searchBar" onkeyup="searchServices()" placeholder="Search services...">
+        </div>
+
+ <!-- Bus Ticket Booking -->
+ <div class="container">
+ <div class="category" id="bus-category">
+    <h2 onclick="toggleDropdown('bus')">🚌 Bus Tickets ▼</h2>
+    <div id="bus" class="dropdown">
+        <a href="https://www.redbus.in/" target="_blank">RedBus</a>
+        <a href="https://www.abhibus.com/" target="_blank">AbhiBus</a>
+        <a href="https://www.paytm.com/bus-tickets" target="_blank">Paytm Bus</a>
+        <a href="https://www.goibibo.com/bus/" target="_blank">Goibibo Bus</a>
+        <a href="https://www.makemytrip.com/bus-tickets/" target="_blank">MakeMyTrip Bus</a>
+        <a href="https://www.yatra.com/bus-tickets" target="_blank">Yatra Bus</a>
+    </div>
+</div>
+
+<!-- RTC Bus Booking Services -->
+<div class="category" id="rtc-bus-category">
+    <h2 onclick="toggleDropdown('rtc-bus')">🚍 RTC Bus Booking Services ▼</h2>
+    <div id="rtc-bus" class="dropdown">
+        <a href="https://www.ksrtc.in/" target="_blank">KSRTC (Karnataka)</a>
+        <a href="https://www.msrtc.in/" target="_blank">MSRTC (Maharashtra)</a>
+        <a href="https://www.apsrtconline.in/oprs-web/guest/home.do?h=1" target="_blank">APSRTC (Andhra Pradesh)</a>
+        <a href="https://www.tnstc.in/" target="_blank">TNSTC (Tamil Nadu)</a>
+        <a href="https://osrtc.org/#/" target="_blank">Odisha RTC</a>
+        <a href="https://www.rsrtc.in/" target="_blank">RSRTC (Rajasthan)</a>
+        <a href="https://upsrtc.up.gov.in/" target="_blank">UPSRTC (Uttar Pradesh)</a>
+    </div>
+</div>
+
+<!-- Train Ticket Booking -->
+<div class="category" id="train-category">
+    <h2 onclick="toggleDropdown('train')">🚆 Train Tickets ▼</h2>
+    <div id="train" class="dropdown">
+        <a href="https://www.irctc.co.in/" target="_blank">IRCTC</a>
+        <a href="https://www.redbus.in/train-tickets" target="_blank">RedBus Train</a>
+        <a href="https://www.confirmtkt.com/" target="_blank">ConfirmTkt</a>
+        <a href="https://www.goibibo.com/trains/" target="_blank">Goibibo Train</a>
+        <a href="https://www.makemytrip.com/railways/" target="_blank">MakeMyTrip Train</a>
+        <a href="https://www.ixigo.com/trains" target="_blank">Ixigo Train</a>
+       
+    </div>
+</div>
+
+<!-- Flight Ticket Booking -->
+<div class="category" id="flight-category">
+    <h2 onclick="toggleDropdown('flight')">✈️ Flight Tickets ▼</h2>
+    <div id="flight" class="dropdown">
+        <a href="https://www.makemytrip.com/flights/" target="_blank">MakeMyTrip</a>
+        <a href="https://www.goibibo.com/flights/" target="_blank">Goibibo Flights</a>
+        <a href="https://www.cleartrip.com/flights" target="_blank">Cleartrip</a>
+        <a href="https://www.easemytrip.com/" target="_blank">EaseMyTrip</a>
+        <a href="https://www.ixigo.com/flights" target="_blank">Ixigo Flights</a>
+        <a href="https://www.yatra.com/flights" target="_blank">Yatra Flights</a>
+        <a href="https://www.skyscanner.co.in/" target="_blank">Skyscanner</a>
+        <a href="https://www.expedia.co.in/Flights" target="_blank">Expedia</a>
+    
+    </div>
+</div>
+
+<!-- Hotel Booking -->
+<div class="category" id="hotel-category">
+    <h2 onclick="toggleDropdown('hotel')">🏨 Hotel Booking ▼</h2>
+    <div id="hotel" class="dropdown">
+        <a href="https://www.booking.com/" target="_blank">Booking.com</a>
+        <a href="https://www.makemytrip.com/hotels/" target="_blank">MakeMyTrip Hotels</a>
+        <a href="https://www.goibibo.com/hotels/" target="_blank">Goibibo Hotels</a>
+        <a href="https://www.agoda.com/" target="_blank">Agoda</a>
+        <a href="https://www.trivago.in/" target="_blank">Trivago</a>
+        <a href="https://www.airbnb.co.in/" target="_blank">Airbnb</a>
+        <a href="https://www.expedia.co.in/Hotels" target="_blank">Expedia Hotels</a>
+    </div>
+</div>
+  <!-- New Tracking Categories -->
+  <div class="category">
+    <h2 onclick="toggleDropdown('busTracking')">🚌 Bus Tracking ▼</h2>
+    <div id="busTracking" class="dropdown">
+        <a href="https://www.redbus.in/" target="_blank">RedBus Tracker</a>
+        <a href="https://www.abhibus.com/" target="_blank">AbhiBus Tracker</a>
+        <a href="https://www.paytm.com/bus-tickets" target="_blank">Paytm Bus Tracker</a>
+        <a href="https://www.whereismybus.in/" target="_blank">Where is my Bus?</a>
+        <a href="https://www.busbud.com/" target="_blank">BusBud</a>
+    </div>
+</div>
+
+<div class="category">
+    <h2 onclick="toggleDropdown('trainTracking')">🚆 Train Tracking ▼</h2>
+    <div id="trainTracking" class="dropdown">
+        <a href="https://trainspy.com/" target="_blank">TrainSpy</a>
+        <a href="https://traintracker.com/" target="_blank">Train Tracker</a>
+        <a href="https://www.irctc.co.in/" target="_blank">IRCTC Train Tracker</a>
+        <a href="https://trackmytrain.co.in/" target="_blank">track my train</a>
+        <a href="https://www.railmitra.com/live-train-running-status#:~:text=Many%20times%20you%20may%20have,check%20train%20running%20status%20online." target="_blank">Rail mitra</a>
+        <a href="https://www.makemytrip.com/railways/liveStatus/#:~:text=Via%20the%20official%20website:%20Visit,live%20train%20running%20status%20accurately" target="_blank">make my trip tracking</a>
+        <a href="https://trainspy.com/train/12723/A-P-EXP" target="_blank">TrainSpy India</a>
+    </div>
+</div>
+
+<div class="category">
+    <h2 onclick="toggleDropdown('flightTracking')">✈️ Flight Tracking ▼</h2>
+    <div id="flightTracking" class="dropdown">
+        <a href="https://www.flightaware.com/" target="_blank">FlightAware</a>
+        <a href="https://www.flightradar24.com/" target="_blank">FlightRadar24</a>
+        <a href="https://www.flightstats.com/" target="_blank">FlightStats</a>
+        <a href="https://www.flightview.com/" target="_blank">FlightView</a>
+        <a href="https://www.planefinder.net/" target="_blank">PlaneFinder</a>
+    </div>
+</div>
+
+<!-- New Additional Categories -->
+<div class="category">
+    <h2 onclick="toggleDropdown('rideBooking')">🚗 Ride Booking ▼</h2>
+    <div id="rideBooking" class="dropdown">
+        <a href="https://www.olacabs.com/" target="_blank">Ola</a>
+        <a href="https://www.uber.com/" target="_blank">Uber</a>
+        <a href="https://www.rapido.bike/" target="_blank">Rapido</a>
+        <a href="https://www.blinkit.com/" target="_blank">Blinkit</a>
+        
+    </div>
+</div>
+
+<!-- Food Booking in Trains and Flights -->
+<div class="category">
+    <h2 onclick="toggleDropdown('foodBookingTrain')">🍽️ Food Booking in Trains ▼</h2>
+    <div id="foodBookingTrain" class="dropdown">
+        <a href="https://www.railrestro.com/" target="_blank">RailRestro</a>
+        <a href="https://www.zoopindia.com/" target="_blank">Zoop India</a>
+        <a href="https://www.irctc.co.in/" target="_blank">IRCTC Food</a>
+        <a href="https://www.travelkhana.com/" target="_blank">TravelKhana</a>
+        <a href="https://www.zomato.com/order-food-online-in-train" target="_blank">Zomato on train</a>
+        
+    </div>
+</div>
+
+<div class="category">
+    <h2 onclick="toggleDropdown('foodBookingFlight')">🍽️ Food Booking in Flights ▼</h2>
+    <div id="foodBookingFlight" class="dropdown">
+        <a href="https://www.goindigo.in/add-on-services/food-menu.html" target="_blank">Indigo food</a>
+        <a href="https://www.ixigo.com/can-we-carry-food-in-domestic-flights-in-india-story-1180257" target="_blank">Ixigo food</a>
+        <a href="https://www.airindiaexpress.com/products-and-services/hotmeals" target="_blank">Air India Express food</a>
+        <a href="https://www.airindia.com/in/en/experience/in-air/whats-on-my-ai/dining-experience.html" target="_blank">Air India Food</a>
+    </div>
+</div>
+<!-- Car Rentals -->
+<div class="category" id="car-rental-category">
+    <h2 onclick="toggleDropdown('car-rentals')">🚗 Car Rentals ▼</h2>
+    <div id="car-rentals" class="dropdown">
+        <a href="https://www.zoomcar.com/" target="_blank">Zoomcar</a>
+        <a href="https://www.mylescars.com/" target="_blank">Myles</a>
+        <a href="https://www.revv.co.in/" target="_blank">Revv</a>
+        <a href="https://www.savaari.com/" target="_blank">Savaari</a>
+        <a href="https://www.turo.com/" target="_blank">Turo (International)</a>
+    </div>
+</div>
+
+<!-- Tour Packages & Experiences -->
+<div class="category" id="tour-packages-category">
+    <h2 onclick="toggleDropdown('tour-packages')">🌍 Tour Packages & Experiences ▼</h2>
+    <div id="tour-packages" class="dropdown">
+        <a href="https://www.thomascook.in/" target="_blank">Thomas Cook</a>
+        <a href="https://www.coxandkings.com/" target="_blank">Cox & Kings</a>
+        <a href="https://www.sotc.in/" target="_blank">SOTC</a>
+        <a href="https://www.easemytrip.com/holidays/" target="_blank">Ease My Trip</a>
+        <a href="https://www.irctctourism.com/tourpacakage_search?searchKey=&tagType=&travelType=&category=" target="_blank">IRCTC Tourism</a>
+        <a href="https://www.gtholidays.in/packages/" target="_blank">GT holidays and packages</a>
+        <a href="https://www.yatra.com/india-tour-packages" target="_blank">Yatra Tours and Packages</a>
+        <a href="https://www.makemytrip.com/holidays/" target="_blank">MakeMyTrip Tours and Packages</a>
+        <a href="https://www.viator.com/" target="_blank">Viator (Local Experiences)</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+<footer style="background: aqua; color: rgb(216, 9, 9);font-weight: 300; padding: 10px; text-align: center; font-size: 14px;">
+    <p> 2025 Smart Travel Booking.<br> Designed and Developed by Venkatesh Cherukuri</p>
+</footer>
+<script>
+// Function to hide welcome page and show the main site
+function enterSite() {
+    document.getElementById('welcome-page').style.display = 'none';
+    document.getElementById('main-header').classList.remove('hidden');
+    document.getElementById('main-container').classList.remove('hidden');
+}
+
+// Toggle dropdown visibility
+function toggleDropdown(category) {
+    const dropdown = document.getElementById(category);
+    dropdown.classList.toggle("visible");
+}
+
+function searchServices() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let categories = document.getElementsByClassName("category");
+            
+            for (let i = 0; i < categories.length; i++) {
+                let category = categories[i];
+                let text = category.innerText.toLowerCase();
+                
+                if (text.includes(input)) {
+                    category.style.display = "block";
+                } else {
+                    category.style.display = "none";
+                }
+            }
+        }
+</script>
+
+ </body>
+ </html>

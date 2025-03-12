@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Smart Travel Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #d0efbe;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .page {
+            flex: 1;
+            margin: 50px auto;
+            max-width: 1000px; /* Increased width */
+            background: white;
+            padding: 40px; /* Increased padding */
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect */
+        .page:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+        }
+
+        /* Social Media Links */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            font-size: 28px;
+            margin: 0 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Facebook */
+        .social-links .facebook {
+            color: #1877F2; /* Official Facebook blue */
+        }
+
+        /* Twitter */
+        .social-links .twitter {
+            color: #1DA1F2; /* Official Twitter blue */
+        }
+
+        /* Instagram */
+        .social-links .instagram {
+            color: #E4405F; /* Official Instagram pink */
+        }
+
+        /* LinkedIn */
+        .social-links .linkedin {
+            color: #0077B5; /* Official LinkedIn blue */
+        }
+
+        /* Hover Effects */
+        .social-links a:hover {
+            transform: scale(1.2); /* Slight zoom effect */
+            opacity: 0.8;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            background: #007acc;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .contact-form button:hover {
+            background: #005999;
+        }
+
+        /* Google Map */
+        .map-container {
+            margin-top: 30px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: aqua;
+            color: rgb(216, 9, 9);
+            font-weight: 300;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><h1>Smart Travel Booking</h1></div>
+            <div class="links">
+                <a href="newhome.html">Home</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page">
+        <h2>Contact Us</h2>
+        <p>Have questions or need assistance? Reach out to us!</p>
+
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> Email: support@smarttravel.com</p>
+            <p><i class="fas fa-phone"></i> Phone: +123 456 789</p>
+            <p><i class="fas fa-map-marker-alt"></i> Location: 123,Vijayawada-AP, India</p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/yourprofile" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Google Map -->
+        <div class="map-container">
+            <h3>Visit Us</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799145938!2d-74.25986553855327!3d40.697670063599775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5e9df08d3%3A0xb3a0c1f4c938e317!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1614031172761!5m2!1sen!2s"
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p> 2025 Smart Travel Booking.<br> Designed and Developed by Venkatesh Cherukuri</p>
+    </footer>
+
+</body>
+</html>
